@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.loader {
+    width: 90px;
+    height: 20px;
+    border-radius: 20px;
+    color: #514b82;
+    border: 2px solid;
+    position: relative;
+  }
+  .loader::before {
+    content: "";
+    position: absolute;
+    margin: 2px;
+    inset: 0 100% 0 0;
+    border-radius: inherit;
+    background: currentColor;
+    animation: l6 2s infinite;
+  }
+  @keyframes l6 {
+      100% {inset:0}
+  }
+
+  .image-preview {
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    background-position: center;
+    margin: 5px;
+    display: inline-block;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    display: flex;
+}
+
+
+#drop-box {
+  border: 2px dashed #4caf50;
+  background-color: #f9f9f9;
+}
+
+.preview-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  gap: 10px;
+}
